@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import "./components/Header/Header.css"
 import "./pages/HomePage/Homepage.css"
@@ -21,6 +21,7 @@ function App() {
           <Route path='collection' element={<Collection/>}/>
           <Route path='shop' element={<Shop/>}/>
           <Route path='aboutus' element={<AboutUs/>}/>
+          <Route path='/*' element={<Navigate to="/"/>}/>
         </Routes>
         <Footer/>
       </div>

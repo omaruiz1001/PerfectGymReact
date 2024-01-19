@@ -1,0 +1,136 @@
+.img-container{
+  position: relative;
+}
+
+.slider-content{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.slider-text{
+  font-size: 60px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+.slider-title{
+  font-size: 65px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width:678px){
+  .header-img{
+    width: 100%;
+    padding: 1rem;
+  }
+  .slider-content{
+    max-width: 16rem;
+  }
+  .slider-text{
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .slider-title{
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .slider-descripcion{
+    font-size: 0.8rem;
+  }
+  .slider-btns button{
+    font-size: 0.9rem;
+  }
+  .slider-btns button a{
+    text-decoration: none;
+  }
+}
+
+
+/* HOMECOLLECTION */
+
+.sub-title{
+  font-size: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: .2px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+.collections-images{
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width:768px){
+  .sub-title{
+    font-size: 1.3rem;
+  }
+  .collection{
+    font-size: 1.5rem;
+  }
+}
+
+/* PRODUCT */
+
+.cardmovil{
+  width: 20rem;
+  margin-left: 3.5rem;
+}
+
+.carousel-container{
+  padding: 2rem;
+}
+
+/* TRENDING */
+
+.grid-container{
+  display: flex;
+  gap: 9rem;
+}
+@media (max-width:768px){
+  
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .firstImg{
+    width: 25rem;
+  }
+}
+
+
+/* NEWS */
+
+.imgg-container{
+  
+  overflow: hidden;
+}
+
+.hovered{
+  transform: scale(1.5);
+  transition: transform 3s ;
+}
+
+@media (max-width:768px){
+  .imgg-container{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hovered{
+    transform: scale(1.1);
+    transition: transform 1s ease;
+  }
+}

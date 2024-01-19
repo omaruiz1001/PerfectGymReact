@@ -1,0 +1,22 @@
+.lists{
+  list-style: none;
+}
+
+.footer-container{
+  height: 23rem;
+  position: relative;
+}
+
+.footer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.footer-icons{
+  font-size: 1.5rem;
+}
+.gift{
+  border-radius: 50%;
+}

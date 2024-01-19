@@ -1,0 +1,157 @@
+.grillas{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 2rem;
+}
+
+
+.icon-cart{
+  width: 40px;
+  height: 40px;
+  stroke: #000;
+  filter: invert(100%);
+}
+
+.icon-cart:hover{
+  cursor: pointer;
+}
+
+
+
+
+.container-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.count-products{
+  position: absolute;
+  top: 55%;
+  
+  filter: invert(100%);
+  background-color: #000;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#contador-productos{
+  font-size: 12px;
+}
+
+.container-cart-products{
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  width: 400px;
+  z-index: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  border-radius: 10px;
+    
+}
+.cart-empty{
+  padding: 0.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.cart-product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+  gap: 2rem;
+}
+
+.info-cart-product{
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
+  
+}
+
+.titulo-producto-carrito{
+  font-size: 20px;
+}
+
+.precio-producto-carrito{
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.icon-close{
+  width: 25px;
+  height: 25px;
+}
+
+.icon-close:hover{
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-total{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.cart-total h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.total-pagar{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.hidden-cart{
+  display: none;
+}
+
+.card {
+  overflow: hidden;
+  display: inline-block;
+  
+}
+
+.card:hover{
+  box-shadow: 10px 20px 20px rgb(22, 10, 243);
+}
+
+.grilla-container{
+  width: 18rem;
+}
+
+@media(max-width:768px){
+  .grillas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+  }
+  .grilla-container{
+    width: 13rem;
+  }
+}
+
+
+
+
+
+
+

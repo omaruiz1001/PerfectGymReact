@@ -7,6 +7,15 @@
 .product img{
   width: 100%;
 }
+.inputs{
+  border: none;
+  border-bottom: 1px solid #BFBFBF;
+  border-radius: 0;
+  color:black;
+  background: transparent;
+  padding: 22px 90px 8px 15px;
+  outline: none;
+}
 
 .droptowns{
   display: flex;
@@ -32,5 +41,17 @@
   .droptowns{
     gap: 1.7rem;
   }
-  
+  .inputs{
+    border: none;
+    border-bottom: 1px solid #BFBFBF;
+    border-radius: 0;
+    color:black;
+    background: transparent;
+    padding: 22px 90px 8px 15px;
+    outline: none;
+    width: 9rem;
+  }
+  .button{
+    margin-bottom: 1rem;
+  }
 }

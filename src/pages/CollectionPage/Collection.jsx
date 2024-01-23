@@ -18,6 +18,19 @@ export const Collection = () => {
   const [prices, setPrices] = useState([]);
   const [error, setError] = useState(null);
 
+  const [searchQuery, setSearchQuery] = useState("")
+  const [searchResult, setSearchResult] = useState([])
+
+  /*Filtramos los productos segun la busqueda */
+  const handleSearch = () =>{
+    const filteredPrices = prices.filter(price => {
+      const categoriesData = categories.find(category=>category.id === price.product)
+      return categoriesData && categoriesData.name.toLowerCase().includes(searchQuery.toLowerCase())
+    })
+    setSearchResult(filteredPrices.length > 0 ? filteredPrices : prices)
+  }
+
+
   // Usamos useEffect para obtener los datos de la api de Stripe//
   useEffect(() => {
     // funcion asincrona con async y await //
@@ -32,6 +45,7 @@ export const Collection = () => {
         setCategories(productsJson.data);
         /*Contiene los precios */
         setPrices(pricesJson.data);
+        setSearchResult(pricesJson.data)
         
       } catch (error) {
         setError(error);
@@ -104,12 +118,26 @@ export const Collection = () => {
               className='arrivalsImg w-100 mt-lg-0 mt-4'
               />
             </div>
-            <div className='bg-white mt-3'>
-              <h5 className='text-primary p-3'>Showing Products</h5>
+            <div className='d-flex justify-content-between align-items-center bg-white mt-3'>
+              <div>
+                <h5 className='text-primary p-3'>Showing Products</h5>
+              </div>
+              <div className='input-container p-3'>
+                <input className='inputs p-1'
+                type="text"
+                placeholder='Buscar por nombre'
+                value={searchQuery}
+                onChange={(e)=>setSearchQuery(e.target.value)}
+                />
+                <button 
+                className='button btn btn-primary'
+                type='button' 
+                onClick={handleSearch}>Buscar</button>
+              </div>
             </div>
           <div className='grid-containerr mt-4'>
          
-          {prices.map(e => {
+          {searchResult.map(e => {
              /*Buscamos hacer una comparacion del id con el metodo find y se almacena en categoriesData*/
             const categoriesData = categories.find(category => category.id === e.product);
     
